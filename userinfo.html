@@ -1,0 +1,122 @@
+ <!DOCTYPE html>
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>User Registration </title>
+ </head>
+  <!-- Login Form -->
+  <div class="main-parent LOGIN">
+    <div class="form-wrap">
+        <h1>Login</h1>
+        <div class="single-input">
+         <label for="email">Email:</label>
+          <input type="email" name="email1" id="email1" placeholder="Email Address" required >
+        </div>
+        <div class="single-input">
+         <label for="password"> Enter Password:</label>
+          <input type="password" name="password" id="password1" placeholder="Password" required >
+        </div>
+        <div class="Submit-button">
+          <button class="button" onclick="onLogin()">Login</button>
+        </div>
+        <div class="account-have">
+          <p>Don't have an account? <a onclick="showRegistration()">Sign up</a></p>
+        </div>
+    </div>
+  </div>
+<!-- Signup Form -->
+  <div class="main-parent SIGNUP">
+    <div class="form-wrap">
+      <form  action="javascript:onRegister();" id="registerForm">
+        <h1>User<span>Registration</span></h1>
+        <div class="single-input">
+          <label for="fname">First Name:</label>
+          <input type="text" name="fname" id="fname" placeholder="First Name" required >
+        </div> 
+        <div class="single-input">
+          <label for="lname">Last Name:</label>
+          <input type="text" name="lname" id="lname" placeholder="Last Name" required >
+        </div>
+        <div class="single-input">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="Email Address" required >
+        </div>
+        <div class="single-input">
+          <label for="address">Address:</label>
+          <input type="text" name="address" id="address" placeholder="Address" required >
+        </div>
+        <div class="single-input">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="pass" placeholder="Password" required >
+        </div>
+        <div class="single-input">
+          <label for="cpass">Confirm Password:</label>
+          <input type="password" name="cpassword" id="cpass" placeholder="Confirm Password" required >
+        </div>
+        <div class="Submit-button">
+          <button class="button">Register</button>
+        </div>
+        <div class="account-have">
+          <span>Already have an account? <a onclick="showLogin()">Sign In</a></span>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Table -->
+ 
+  <div class="userlist hideuser">
+    <div class="header">
+      <div>User <span>List</span> </div>
+      <button onclick="logout()">Logout</button>
+    </div>
+    
+        <table
+         class="centered-table" name="sample" id="sample">
+           <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Address</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="myTable">
+
+
+          </tbody>
+        </table>
+      </div>
+  </div>
+  <div id="viewDetails">
+    <span class="closeBtn">&times;</span>
+    <!-- User details will be dynamically displayed here -->
+  </div>
+<!--  Update Form -->
+  <div class="main-parent UPDATE">
+    <div class="form-wrap">
+      <form  action="javascript:showTableAgain();" id="editUser">
+        <h1>Edit<span>User</span></h1>
+        <div class="single-input">
+          <label for="fname1">First Name:</label>
+          <input type="text" name="fname" id="fname1" placeholder="First Name">
+        </div> 
+        <div class="single-input">
+          <label for="lname1">Last Name:</label>
+          <input type="text" name="lname" id="lname1" placeholder="Last Name">
+        </div>
+        <div class="single-input">
+          <label for="address1">Address:</label>
+          <input type="text" name="address" id="address1" placeholder="Address">
+        </div>
+        <div class="Submit-button">
+          <button type="submit" onclick="updateData()" class="button" id="ubutton">Update</button>
+          <div class="back-button">
+            <button type="back" onclick="showUser()" class="back-button" id="back-button">Cancel</button>
+          </div>
+      </form>
+  <script src="sweetalert.js"></script>
+  <script src="main.js"></script>
+ </body>
+ </html>
